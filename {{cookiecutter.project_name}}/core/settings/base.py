@@ -2,11 +2,11 @@ import os
 import environ
 from pathlib import Path
 
-{%- if cookiecutter.use_i18n == 'y' -%}
+{ % - if cookiecutter.use_i18n == 'y' - %}
 
 from django.utils.translation import gettext_lazy as _
 
-{% endif %}
+{ % endif %}
 
 env = environ.Env()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -35,29 +35,29 @@ DJANGO_APPS = [
 ]
 
 LOCAL_APPS = [
-    {%- if cookiecutter.use_django_debug_toolbar == "y" %}
-    "django_seed",
-    {%- endif %}
+    { % - if cookiecutter.use_django_debug_toolbar == "y" %}
+"django_seed",
+{ % - endif %}
 
-    {%- if cookiecutter.use_django_debug_toolbar == "y" %}
-    "debug_toolbar",
-    {%- endif %}
+{ % - if cookiecutter.use_django_debug_toolbar == "y" %}
+"debug_toolbar",
+{ % - endif %}
 ]
 
 THIRD_PARTY_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
-    {%- if cookiecutter.use_ckeditor == "y" %}
-    'ckeditor',
-    'ckeditor_uploader',
-    {%- endif %}
-    'drf_spectacular',
-    'drf_spectacular_sidecar',
-    'corsheaders',
-    {%- if cookiecutter.use_i18n == "y" %}
-    'modeltranslation',
-    {%- endif %}
-    'django_filters',
+    { % - if cookiecutter.use_ckeditor == "y" %}
+'ckeditor',
+'ckeditor_uploader',
+{ % - endif %}
+'drf_spectacular',
+'drf_spectacular_sidecar',
+'corsheaders',
+{ % - if cookiecutter.use_i18n == "y" %}
+'modeltranslation',
+{ % - endif %}
+'django_filters',
 ]
 
 MY_APPS = []
@@ -73,9 +73,9 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-    {%- if cookiecutter.use_django_debug_toolbar == "y" %}
-    "debug_toolbar.middleware.DebugToolbarMiddleware",
-    {%- endif %}
+    { % - if cookiecutter.use_django_debug_toolbar == "y" %}
+"debug_toolbar.middleware.DebugToolbarMiddleware",
+{ % - endif %}
 
 ]
 
@@ -145,11 +145,11 @@ LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
 
-{%- if cookiecutter.use_i18n == 'y' -%}
+{ % - if cookiecutter.use_i18n == 'y' - %}
 # Config MultiLanguage
 LANGUAGES = (('en', _('English')),)
 LOCALE_PATHS = [os.path.join(BASE_DIR, 'locale/')]
-{% endif %}
+{ % endif %}
 
 USE_I18N = True
 USE_L10N = True
@@ -160,7 +160,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,'assets')
+    os.path.join(BASE_DIR, 'assets')
 ]
 
 STATIC_ROOT = BASE_DIR / 'static'
@@ -173,5 +173,6 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+AUTH_USER_MODEL = 'core.apps.accounts.CustomUser'
 
 from core.configs import *
