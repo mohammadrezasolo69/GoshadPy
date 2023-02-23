@@ -22,11 +22,6 @@ django-ckeditor
 {% endif %}
 
 
-{% if cookiecutter.use_redis_for_cache == "y" %}
-redis
-{% endif %}
-
-
 {% if cookiecutter.use_i18n == "y" %}
 django-modeltranslation
 {% endif %}
