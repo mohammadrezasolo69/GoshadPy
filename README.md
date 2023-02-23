@@ -19,5 +19,28 @@ cookiecutter https://github.com/mohammadrezasolo69/GoshadPy
 You'll be prompted for some values. Provide them, then a Django project will be created for you.
 
 
+## Manual
+First create virtualenv :
+```
+python3 -m venv venv
+```
+
+activated :
+```
+source venv/bin/activate
+```
+
+Now install requirement :
+```
+pip install -r requirements/requirements_local.txt
+```
+
+run command :
+```
+./manage.py migrate
+./manage.py runserver --settings=core.settings.local
+```
+
+
 ## Point
 After creating the project, don't forget to add the `core/.env` file to `.gitignore`
