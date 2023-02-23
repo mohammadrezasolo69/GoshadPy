@@ -1,5 +1,6 @@
 {
   "project_name": "core",
+  "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
   "use_jalali": "y",
   "use_celery": "y",
   "use_celery_beat": "y",

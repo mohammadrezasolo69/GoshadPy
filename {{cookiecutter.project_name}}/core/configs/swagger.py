@@ -1,6 +1,6 @@
 # Config drf-spectacular
 SPECTACULAR_SETTINGS = {
-    'TITLE': '{{cookiecutter.project_name}}',
+    'TITLE': '{{cookiecutter.project_slug}}',
     'DESCRIPTION': '',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
