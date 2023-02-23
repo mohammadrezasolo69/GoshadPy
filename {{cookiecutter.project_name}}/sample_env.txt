@@ -5,3 +5,5 @@ POSTGRES_DB = 'xoxoxoxoxoxoxxoxoxox'
 POSTGRES_USER = 'xoxoxoxoxoxoxxoxoxox'
 POSTGRES_PASSWORD = 'xoxoxoxoxoxoxxoxoxox'
 POSTGRES_HOST = 'xoxoxoxoxoxoxxoxoxox'
+
+CSRF_TRUSTED_ORIGINS = 'xoxoxoxoxoxoxxoxoxox'
