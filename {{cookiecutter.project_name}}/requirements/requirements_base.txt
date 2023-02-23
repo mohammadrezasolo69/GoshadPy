@@ -16,18 +16,6 @@ django_jalali
 {% endif %}
 
 
-{% if cookiecutter.use_celery == "y" %}
-celery
-redis
-django-celery-result
-{% endif %}
-
-
-{% if cookiecutter.use_celery_beat == "y" %}
-django-celery-beat
-{% endif %}
-
-
 {% if cookiecutter.use_ckeditor == "y" %}
 django-ckeditor
 {% endif %}
