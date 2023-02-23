@@ -9,12 +9,9 @@ https://docs.djangoproject.com/en/4.1/howto/deployment/wsgi/
 
 import os
 
-from django.conf import settings
 from django.core.wsgi import get_wsgi_application
 
-if settings.DEBUG:
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'core.settings.local')
-else:
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'core.settings.production')
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'core.settings')
 
 application = get_wsgi_application()
