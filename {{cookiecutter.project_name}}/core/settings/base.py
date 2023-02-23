@@ -176,6 +176,6 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-AUTH_USER_MODEL = 'core.apps.accounts.CustomUser'
+AUTH_USER_MODEL = 'accounts.CustomUser'
 
 from core.configs import *
