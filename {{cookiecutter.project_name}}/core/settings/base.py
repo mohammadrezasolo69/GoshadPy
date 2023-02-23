@@ -1,7 +1,3 @@
-{%- if cookiecutter.use_i18n == 'y' -%}
-from django.utils.translation import gettext_lazy as _ \
-{% endif %}
-
 import os
 import environ
 from pathlib import Path
@@ -149,7 +145,7 @@ TIME_ZONE = 'UTC'
 
 {%- if cookiecutter.use_i18n == "y" %}
 # Config MultiLanguage
-LANGUAGES = (('en', _('English')),)
+LANGUAGES = (('en', 'English'),)
 LOCALE_PATHS = [os.path.join(BASE_DIR, 'locale/')]
 {%- endif %}
 
