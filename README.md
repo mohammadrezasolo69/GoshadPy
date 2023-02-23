@@ -17,3 +17,7 @@ cookiecutter https://github.com/mohammadrezasolo69/GoshadPy
 ```
 
 You'll be prompted for some values. Provide them, then a Django project will be created for you.
+
+
+## Point
+After creating the project, don't forget to add the `core/.env` file to `.gitignore`
