@@ -11,3 +11,6 @@ POSTGRES_HOST = 'xoxoxoxoxoxoxxoxoxox'
 
 # Cors
 CSRF_TRUSTED_ORIGINS = 'xoxoxoxoxoxoxxoxoxox'
+
+# Redis
+REDIS_LOCATION = 'xoxoxoxoxoxoxxoxoxox'
