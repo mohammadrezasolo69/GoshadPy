@@ -1,9 +1,9 @@
 {%- if cookiecutter.use_jalali == 'y' -%}
-from django_jalali.db import models as jmodels
+from django_jalali.db import models as jmodels \
 {%- endif -%}
 
 from django.db import models
-from django.utils.translation import gettext_lazy as _
+from django.utils.translation import gettext_lazy as _ \
 
 class DateBasic(models.Model):
     class Meta:

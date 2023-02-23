@@ -1,5 +1,5 @@
 {%- if cookiecutter.use_i18n == 'y' -%}
-from django.utils.translation import gettext_lazy as _
+from django.utils.translation import gettext_lazy as _ \
 {% endif %}
 
 import os
