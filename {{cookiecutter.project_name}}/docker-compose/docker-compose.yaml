@@ -1,0 +1,66 @@
+version: "3.9"
+
+services:
+  web-server:
+    image: nginx:latest
+    container_name: 'nginx_{{cookiecutter.project_slug}}'
+    restart: "always"
+    ports:
+        - 800:800
+    volumes:
+        - ./static/:/static/
+        - ./media/:/media/
+        - /var/log/{{cookiecutter.project_slug}}/nginx/:/var/log/nginx/
+        - ./nginx:/etc/nginx/conf.d
+    depends_on:
+        - app
+
+  db:
+    image: postgres:14.1
+    restart: 'always'
+    container_name: 'db_{{cookiecutter.project_slug}}'
+    ports:
+      - 5432:5432
+    env_file:
+      - ../core/.env
+
+  redis:
+    image: redis:7
+    container_name: 'redis_{{cookiecutter.project_slug}}'
+    restart: 'always'
+    ports:
+      - 6379:6379
+    volumes:
+      - redis-data:/data
+
+  app:
+    build:
+      context: ../
+      dockerfile: Dockerfile
+    restart: 'always'
+    container_name: 'app_{{cookiecutter.project_slug}}'
+    command: >
+      sh -c "
+        python manage.py migrate;
+        python manage.py collectstatic --noinput;
+        gunicorn --bind=0.0.0.0:8000 --timeout=90 --workers=1 core.wsgi:application;
+      "
+    env_file:
+      - ../core/.env
+    volumes:
+      - .:/app/{{cookiecutter.project_slug}}/
+      - ./static/:/static
+      - ./media/:/app/{{cookiecutter.project_slug}}/media/
+      - /var/log/{{cookiecutter.project_slug}}:/var/log/{{cookiecutter.project_slug}}-back
+    expose:
+      - 8000
+    depends_on:
+      - db
+      - redis
+      - nginx
+
+
+networks:
+  default:
+    name: {{cookiecutter.project_slug}}
+    external: true
