@@ -5,6 +5,7 @@ from pathlib import Path
 from django.utils.translation import gettext_lazy as _
 {% endif %}
 
+env = environ.Env()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 environ.Env.read_env(os.path.join(BASE_DIR, 'core/.env'))
@@ -32,7 +33,7 @@ DJANGO_APPS = [
 
 LOCAL_APPS = [
     {%- if cookiecutter.use_django_debug_toolbar == "y" %}
-    "django-seed",
+    "django_seed",
     {%- endif %}
 
     {%- if cookiecutter.use_django_debug_toolbar == "y" %}
