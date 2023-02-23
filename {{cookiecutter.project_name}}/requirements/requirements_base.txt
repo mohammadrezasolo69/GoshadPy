@@ -11,8 +11,6 @@ drf-spectacular-sidecar
 Pillow
 
 
-
-
 {% if cookiecutter.use_jalali == "y" %}
 django_jalali
 {% endif %}
@@ -37,5 +35,10 @@ django-ckeditor
 
 {% if cookiecutter.use_redis_for_cache == "y" %}
 redis
+{% endif %}
+
+
+{% if cookiecutter.use_i18n == "y" %}
+django-modeltranslation
 {% endif %}
 

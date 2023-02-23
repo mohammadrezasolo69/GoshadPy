@@ -1,0 +1,7 @@
+SECRET_KEY = 'xoxoxoxoxoxoxxoxoxox'
+
+ENGINE = 'xoxoxoxoxoxoxxoxoxox'
+POSTGRES_DB = 'xoxoxoxoxoxoxxoxoxox'
+POSTGRES_USER = 'xoxoxoxoxoxoxxoxoxox'
+POSTGRES_PASSWORD = 'xoxoxoxoxoxoxxoxoxox'
+POSTGRES_HOST = 'xoxoxoxoxoxoxxoxoxox'
