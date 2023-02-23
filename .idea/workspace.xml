@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f54deb1-9a4c-492a-a5d4-d185c61ce56c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.project_name}}/requirements/requirements_base.txt" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.project_name}}/requirements/requirements_base.txt" afterDir="false" />
-    </list>
+    <list default="true" id="6f54deb1-9a4c-492a-a5d4-d185c61ce56c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,14 +30,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/mohammadreza/Desktop/core"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/mohammadreza/Desktop/core&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/{{cookiecutter.project_name}}" />
@@ -58,6 +56,7 @@
       <workItem from="1677152984345" duration="695000" />
       <workItem from="1677153804428" duration="68000" />
       <workItem from="1677154471538" duration="885000" />
+      <workItem from="1677155546459" duration="538000" />
     </task>
     <servers />
   </component>
