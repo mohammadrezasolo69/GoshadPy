@@ -152,7 +152,7 @@ TIME_ZONE = 'UTC'
 # Config MultiLanguage
 LANGUAGES = (('en', _('English')),)
 LOCALE_PATHS = [os.path.join(BASE_DIR, 'locale/')]
-{% endif %}
+{%- endif -%}
 
 USE_I18N = True
 USE_L10N = True

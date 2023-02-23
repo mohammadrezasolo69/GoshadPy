@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f54deb1-9a4c-492a-a5d4-d185c61ce56c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.project_name}}/core/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.project_name}}/core/settings/base.py" afterDir="false" />
-    </list>
+    <list default="true" id="6f54deb1-9a4c-492a-a5d4-d185c61ce56c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,7 +62,7 @@
       <workItem from="1677154471538" duration="885000" />
       <workItem from="1677155546459" duration="538000" />
       <workItem from="1677156301075" duration="593000" />
-      <workItem from="1677156925676" duration="1183000" />
+      <workItem from="1677156925676" duration="2027000" />
     </task>
     <servers />
   </component>
