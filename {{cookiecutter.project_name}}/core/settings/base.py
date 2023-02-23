@@ -1,9 +1,11 @@
-import os
-import environ
-from pathlib import Path
 {%- if cookiecutter.use_i18n == 'y' -%}
 from django.utils.translation import gettext_lazy as _
 {% endif %}
+
+import os
+import environ
+from pathlib import Path
+
 
 env = environ.Env()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
