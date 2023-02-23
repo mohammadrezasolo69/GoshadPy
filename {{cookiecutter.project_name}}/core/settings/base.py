@@ -1,11 +1,8 @@
 import os
 import environ
 from pathlib import Path
-
 {%- if cookiecutter.use_i18n == 'y' -%}
-
 from django.utils.translation import gettext_lazy as _
-
 {% endif %}
 
 env = environ.Env()
