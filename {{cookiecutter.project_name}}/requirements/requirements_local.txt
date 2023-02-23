@@ -1,0 +1,7 @@
+-r requirements_base.txt
+
+django-seed
+
+{% if cookiecutter.use_django_debug_toolbar == "y" %}
+django-debug-toolbar
+{% endif %}

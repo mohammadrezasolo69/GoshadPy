@@ -1,0 +1,16 @@
+# Main
+DEBUG = 'xoxoxoxoxoxoxxoxoxox'
+SECRET_KEY = 'xoxoxoxoxoxoxxoxoxox'
+
+# Postgres
+ENGINE = 'xoxoxoxoxoxoxxoxoxox'
+POSTGRES_DB = 'xoxoxoxoxoxoxxoxoxox'
+POSTGRES_USER = 'xoxoxoxoxoxoxxoxoxox'
+POSTGRES_PASSWORD = 'xoxoxoxoxoxoxxoxoxox'
+POSTGRES_HOST = 'xoxoxoxoxoxoxxoxoxox'
+
+# Cors
+CSRF_TRUSTED_ORIGINS = 'xoxoxoxoxoxoxxoxoxox'
+
+# Redis
+REDIS_LOCATION = 'xoxoxoxoxoxoxxoxoxox'

@@ -1,0 +1,28 @@
+Django
+django-filter
+django-environ
+psycopg2-binary
+django-cors-headers
+gunicorn
+djangorestframework
+djangorestframework-simplejwt
+drf-spectacular
+drf-spectacular-sidecar
+Pillow
+redis
+
+
+{% if cookiecutter.use_jalali == "y" %}
+django_jalali
+{% endif %}
+
+
+{% if cookiecutter.use_ckeditor == "y" %}
+django-ckeditor
+{% endif %}
+
+
+{% if cookiecutter.use_i18n == "y" %}
+django-modeltranslation
+{% endif %}
+

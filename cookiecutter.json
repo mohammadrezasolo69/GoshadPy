@@ -1,0 +1,20 @@
+{
+  "project_name": "core",
+  "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
+
+  "author_name": "Mohammadreza Soltandoost",
+  "email": "mohammadrezasolo69@gmail.com",
+  "version": "1.0.0",
+  "open_source_license": [
+    "MIT",
+    "BSD",
+    "GPLv3",
+    "Apache Software License 2.0",
+    "Not open source"
+  ],
+
+  "use_jalali": "y",
+  "use_ckeditor": "y",
+  "use_django_debug_toolbar": "y",
+  "use_i18n": "n"
+}
