@@ -3,7 +3,6 @@
   "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
   "use_jalali": "y",
   "use_ckeditor": "y",
-  "use_redis_for_cache": "y",
   "use_django_debug_toolbar": "y",
   "use_i18n": "n"
 }
