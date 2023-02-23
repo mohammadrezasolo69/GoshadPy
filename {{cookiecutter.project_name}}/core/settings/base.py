@@ -2,11 +2,11 @@ import os
 import environ
 from pathlib import Path
 
-{ % - if cookiecutter.use_i18n == 'y' - %}
+{%- if cookiecutter.use_i18n == 'y' - %}
 
 from django.utils.translation import gettext_lazy as _
 
-{ % endif %}
+{% endif %}
 
 env = environ.Env()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -35,32 +35,35 @@ DJANGO_APPS = [
 ]
 
 LOCAL_APPS = [
-    { % - if cookiecutter.use_django_debug_toolbar == "y" %}
-"django_seed",
-{ % - endif %}
+    {%- if cookiecutter.use_django_debug_toolbar == "y" %}
+    "django_seed",
+    {%- endif %}
 
-{ % - if cookiecutter.use_django_debug_toolbar == "y" %}
-"debug_toolbar",
-{ % - endif %}
+    {%- if cookiecutter.use_django_debug_toolbar == "y" %}
+    "debug_toolbar",
+    {%- endif %}
 ]
 
 THIRD_PARTY_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
-    { % - if cookiecutter.use_ckeditor == "y" %}
-'ckeditor',
-'ckeditor_uploader',
-{ % - endif %}
-'drf_spectacular',
-'drf_spectacular_sidecar',
-'corsheaders',
-{ % - if cookiecutter.use_i18n == "y" %}
-'modeltranslation',
-{ % - endif %}
-'django_filters',
+    {%- if cookiecutter.use_ckeditor == "y" %}
+    'ckeditor',
+    'ckeditor_uploader',
+    {%- endif %}
+    'drf_spectacular',
+    'drf_spectacular_sidecar',
+    'corsheaders',
+    {%- if cookiecutter.use_i18n == "y" %}
+    'modeltranslation',
+    {%- endif %}
+    'django_filters',
 ]
 
-MY_APPS = []
+MY_APPS = [
+    'apps.utils.UtilsConfig',
+    'apps.accounts.AccountsConfig',
+]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS + MY_APPS
 
@@ -73,9 +76,9 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-    { % - if cookiecutter.use_django_debug_toolbar == "y" %}
-"debug_toolbar.middleware.DebugToolbarMiddleware",
-{ % - endif %}
+    {%- if cookiecutter.use_django_debug_toolbar == "y" %}
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
+    {%- endif %}
 
 ]
 
@@ -145,11 +148,11 @@ LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
 
-{ % - if cookiecutter.use_i18n == 'y' - %}
+{%- if cookiecutter.use_i18n == 'y' - %}
 # Config MultiLanguage
 LANGUAGES = (('en', _('English')),)
 LOCALE_PATHS = [os.path.join(BASE_DIR, 'locale/')]
-{ % endif %}
+{% endif %}
 
 USE_I18N = True
 USE_L10N = True
