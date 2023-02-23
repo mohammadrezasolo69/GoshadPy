@@ -50,9 +50,6 @@ THIRD_PARTY_APPS = [
     'drf_spectacular',
     'drf_spectacular_sidecar',
     'corsheaders',
-    {%- if cookiecutter.use_celery_beat == "y" %}
-    'django_celery_beat',
-    {%- endif %}
     {%- if cookiecutter.use_i18n == "y" %}
     'modeltranslation',
     {%- endif %}

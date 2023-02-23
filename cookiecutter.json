@@ -2,8 +2,6 @@
   "project_name": "core",
   "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
   "use_jalali": "y",
-  "use_celery": "y",
-  "use_celery_beat": "y",
   "use_ckeditor": "y",
   "use_redis_for_cache": "y",
   "use_django_debug_toolbar": "y",
